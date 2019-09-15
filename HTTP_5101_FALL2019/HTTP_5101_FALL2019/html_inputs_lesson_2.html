@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML FORMS</title>
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+</head>
+<body>
+
+    <section>
+        <!--
+        Q: What does it mean to GET versus POST?
+        A: 
+            Similarities
+            - Both GET and POST are ways that the html document can send (http request) information somewhere else (a server)
+            Differences
+            - GET encodes information in the URL
+            - POST encodes information into the request itself
+
+        
+
+        Try setting the form method and action attributes to these:
+
+        [method="GET" OR method="POST"]
+        [action="http://sandbox.bittsdevelopment.com/humber/httpdebug/acceptdata.php"]
+        or
+        [method="POST"]
+        [action="https://postman-echo.com/post"]
+        or
+        [method="GET"]
+        [action="https://postman-echo.com/get"]
+        -->
+        <form method="post" action="http://sandbox.bittsdevelopment.com/humber/httpdebug/acceptdata.php">
+            <h1>Tell me about your friend?</h1>
+            <label> Friend: </label>
+            <input type="text" id="friend_name" name="friend_name" placeholder="e.g. john" />
+            <label>Pet: </label>
+            <input type="text" id="pet_name" name="pet_name" placeholder="e.g. boots" />
+            <label>what's your friends favorite ice cream flavor:</label>
+                <select id="friend_icecream" name="friend_icecream">
+                    <option value="vanilla">vanilla</option>
+                    <option value="chocolate">chocolate</option>
+                    <option value="cheesecake">cheesecake</option>
+                </select>
+            <label>Please enter your password:</label>
+                <input type="password" id="user_password" name="user_password" placeholder="password" />
+            <input type="submit" value="Enter" />
+        </form>
+
+    </section>
+</body>
+</html>
